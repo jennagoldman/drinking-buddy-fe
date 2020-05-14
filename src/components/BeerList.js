@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBeers } from '../services/beer-api';
 import { setBeers } from '../actions/beerActions';
 import { getBeers } from '../selectors/beerSelectors';
 import Beer from './Beer';
@@ -10,12 +9,7 @@ const BeerList = () => {
 
   const beers = useSelector(getBeers);
   useEffect(() => {
-    //fetch all beers from server
-    fetchBeers()
-      .then(beers => {
-      //store all beers in redux
-        dispatch(setBeers(beers));
-      })
+    dispatch(setBeers());
   }, []);
 
   //get all beers from redux

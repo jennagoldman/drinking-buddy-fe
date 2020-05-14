@@ -8,5 +8,5 @@ export default function reducer(state = [], action) {
       return action.payload;
     default:
       return state;
-  }
-}
+  };
+};
