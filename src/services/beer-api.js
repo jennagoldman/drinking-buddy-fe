@@ -6,5 +6,10 @@ export const createBeer = beer => {
     },
     body: JSON.stringify(beer)
   })
-  .then(res => res.json());
+    .then(res => res.json());
+}
+
+export const fetchBeers = () => {
+  return fetch(`${process.env.API_URL}/api/v1/beers`)
+    .then(res => res.json());
 }
