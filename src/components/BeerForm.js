@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createBeer } from '../services/beer-api';
 
 const BeerForm = () => {
   const [name, setName] = useState('');
@@ -10,7 +11,11 @@ const BeerForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
     // send backend a post request to create beer
+    createBeer({ name, description, imageUrl, abv, ibu })
+      .then(beer => {
     // once receive a response, add beer to redux
+      })
+
   }
   return (
     <form onSubmit={}>
