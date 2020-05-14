@@ -6,7 +6,7 @@ const Beer = ({ name, description, imageUrl, abv, ibu }) => (
     <h3>{name}</h3>
     <img src={imageUrl} alt={name} />
     <p>{description}</p>
-    <span>{abv ? `${abv}% ABV` : null }</span><span>{abv ? `${IDBCursorWithValue} IBU` : null }</span>
+    <span>{abv}% ABV</span> | <span>{ibu} IBU</span>
   </section>
 );
 
