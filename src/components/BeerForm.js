@@ -7,8 +7,13 @@ const BeerForm = () => {
   const [abv, setAbv] = useState(0);
   const [ibu, setIbu] = useState(0);
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    // send backend a post request to create beer
+    // once receive a response, add beer to redux
+  }
   return (
-    <form>
+    <form onSubmit={}>
       <input type="text" value={name} onChange={({ target }) => setName(target.value)} placeholder="Beer name" />
       <textarea value={description} onChange={({ target }) => setDescription(target.value)} placeholder="Beer description" />
       <input type="text" value={imageUrl} onChange={({ target }) => setImageUrl(target.value)} placeholder="Image URL" />
