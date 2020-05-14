@@ -13,13 +13,7 @@ const BeerForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // send backend a post request to create beer
-    createBeer({ name, description, imageUrl, abv, ibu })
-      .then(beer => {
-    // once receive a response, add beer to redux
-        dispatch(addBeer(beer));
-      })
-
+    dispatch(addHabit({ name, description, imageUrl, abv, ibu }));
   }
   return (
     <form onSubmit={handleSubmit}>
