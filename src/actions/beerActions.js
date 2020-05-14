@@ -1,10 +1,15 @@
-import { fetchBeers } from "../services/beer-api";
+import { fetchBeers, createBeer } from "../services/beer-api";
 
 export const ADD_BEER = 'ADD_BEER';
-export const addBeer = beer => ({
-  type: ADD_BEER,
-  payload: beer
-});
+export const addBeer = beer => dispatch => {
+  return createBeer(beer)
+    .then(createdBeer => {
+      dispatch({
+        type: ADD_BEER,
+        payload: beer
+      })
+    })
+};
 
 export const SET_BEERS = 'SET_BEERS';
 export const setBeers = () => dispatch => {

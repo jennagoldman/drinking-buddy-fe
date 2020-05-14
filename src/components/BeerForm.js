@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createBeer } from '../services/beer-api';
 import { addBeer } from '../actions/beerActions';
 
 const BeerForm = () => {
@@ -13,7 +12,7 @@ const BeerForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(addHabit({ name, description, imageUrl, abv, ibu }));
+    dispatch(addBeer({ name, description, imageUrl, abv, ibu }));
   }
   return (
     <form onSubmit={handleSubmit}>
