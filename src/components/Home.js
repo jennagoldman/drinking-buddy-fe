@@ -1,8 +1,11 @@
 import React from 'react';
+import BeerForm from './BeerForm';
 
 const Home = () => (
   <>
-    <HabitForm />
+    <BeerForm />
     <BeerList />
   </>
-)
+);
+
+export default Home;
