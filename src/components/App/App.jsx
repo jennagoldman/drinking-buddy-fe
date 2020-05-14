@@ -1,7 +1,7 @@
 import React from 'react';
-import BeerForm from '../BeerForm';
+import Home from '../Home';
 
 export default function App() {
-  return <BeerForm />;
+  return <Home />;
 }
   

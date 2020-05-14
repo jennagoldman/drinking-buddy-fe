@@ -1,5 +1,6 @@
 import React from 'react';
 import BeerForm from './BeerForm';
+import BeerList from './BeerList';
 
 const Home = () => (
   <>
