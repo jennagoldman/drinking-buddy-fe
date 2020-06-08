@@ -1,0 +1,1 @@
+export const getBeers = state => state.beers;
